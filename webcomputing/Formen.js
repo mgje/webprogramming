@@ -1,0 +1,1 @@
+Processing_Code="background(0);\npoint(240, 60);\nline(20, 50, 420, 110);\nquad(158,55,199,14,392,66,351,107);\ntriangle(347, 54, 392, 9, 392, 66);\ntriangle(158, 55, 290, 91, 290, 112);\nrect(180, 60, 220, 40);\nellipse(278, -100, 400, 400);\nellipse(120, 100, 110, 110);\nellipse(412, 60, 18, 18);\narc(90, 60, 80, 80, 0, HALF_PI);\narc(190, 60, 80, 80, 0, PI+HALF_PI);";
