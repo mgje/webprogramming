@@ -1,1 +1,2 @@
 Processing_Code="background(255);\nsmooth();\n\npoint(250, 200);\n\nline(20, 50, 420, 400);\n\nquad(158,155,199,14,392,66,351,107);\n\ntriangle(200, 185, 290, 191, 290, 172);\n\nrect(260, 220, 120, 30);\n\nellipse(278, 500, 400, 400);\nellipse(100, 190, 110, 110);\nellipse(412, 260, 18, 18);\n\narc(90, 60, 80, 80, 0, HALF_PI);\narc(190, 240, 80, 80, 0, PI+HALF_PI);\n";
+$("a[data-index=1]").addClass("active");
