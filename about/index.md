@@ -5,13 +5,14 @@ class: processing
 ---
 # About
 
-Diese Programmierbeispiele werden teilweise in der Einführungsvorlesung an der Universität Basel
-verwendet. Im Rahmen eines Besuchertags können zukünftige Studierende oder Interessierte Personen 
-direkt auf Ihrem Mobile Gerät Programme schreiben und testen.
+Die Programmierbeispiele stammen teilweise aus Informatik Veranstaltungen der Universität Basel.
+Die Webanwendung wurde als Demonstartion für den Besuchertag 2014 (Starting Days 2014) verwendet.
+Interessierte Schülerinnen und Schüler können direkt auf ihren mobile Geräten Programme schreiben und testen.
 
 ## Processing
 
-Als Programmiersprache wird ...
+Processing wurde als Programmiersprache speziell für Gestalter und Künstler entwickelt. Sie eignet sich speziell für die Programmierung von Bildern, Animation und Sound und führt sehr schnell zu visuell ansprechenden Resultaten. 
+
 
 ## Dank
 Viele Elemente wurden aus dem Projekt [http://hello.processing.org/](http://hello.processing.org/)
