@@ -45,7 +45,7 @@ init_f = () ->
 setupUI_f = () ->
 	$("#runButton").click( ()=>
 		@runCode()
-		@editor.focus()
+		# @editor.focus()
 		false
 	).tooltip
 		container: 'body'
