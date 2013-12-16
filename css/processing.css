@@ -298,10 +298,10 @@ div#editorContainer {
 }
 
 div#editorCommands {
-	/*position: absolute;*/
-	bottom: -18px;
-	right: -300px;
-	z-index: 1000;	
+	position: absolute;
+	top: 590px;
+	left: 430px;
+/*	z-index: 1000;	*/
 }
 
 #errorModalText {
