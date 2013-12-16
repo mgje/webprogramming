@@ -59,7 +59,7 @@ a:focus, a:active, a::-moz-focus-inner {
 #headerContainer {
 	position: relative;
 	width: 100%;
-	min-width: 960px;
+	min-width: 1024px;
 	background: #FcFcFf;
 	z-index: 1000;		
 	height: 48px;
@@ -108,8 +108,8 @@ nav#pageNav a:hover {
 div#lessonNavContainer {
 	position:absolute;
 	top:13px; 
-	left: 158px;
-	right:222px;
+	left: 128px;
+	right:152px;
 	text-align: center;	
 }
 
