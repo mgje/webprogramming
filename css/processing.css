@@ -299,7 +299,7 @@ div#editorContainer {
 
 div#editorCommands {
 	/*position: absolute;*/
-	bottom: -35px;
+	bottom: -18px;
 	right: -300px;
 	z-index: 1000;	
 }
