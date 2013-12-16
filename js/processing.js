@@ -34,6 +34,7 @@
         range = $("#colorPicker").spectrum.range;
         token = $("#colorPicker").spectrum.token;
         _this.editor.session.replace(range, token.value + "(" + color.r + "," + color.g + "," + color.b + ");");
+        $("#runButton").focus();
         return false;
       }
     });
@@ -83,7 +84,7 @@
         $("#colorPicker").css({
           top: pixelPosition.top,
           left: pixelPosition.left
-        });
+        }, $("#colorPicker").focus());
         $("#colorPicker").spectrum("show");
         return false;
       }

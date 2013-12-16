@@ -36,6 +36,7 @@ init_f = () ->
 			range = $("#colorPicker").spectrum.range
 			token = $("#colorPicker").spectrum.token
 			@editor.session.replace range, token.value + "(" + color.r + "," + color.g + "," + color.b + ");"
+			$("#runButton").focus()
 			false
 	@refreshUI();
 	false
@@ -84,7 +85,7 @@ setupUI_f = () ->
 			$("#colorPicker").css
 				top: pixelPosition.top
 				left: pixelPosition.left
-
+				$("#colorPicker").focus()
 			$("#colorPicker").spectrum "show"
 			false
 	false
