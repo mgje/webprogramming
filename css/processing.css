@@ -153,6 +153,10 @@ a.active span, a.active:hover span {
 	min-height: 540px;
 }*/
 
+div#blogContainer {
+	margin-left: 24px;
+}
+
 div#canvasContainer, div#editorContainer {
 	display: true !important;
 }
