@@ -196,8 +196,8 @@ div#canvasContainer {
 
 #toggleRulers {
 	position: absolute;
-	margin-left: 20px;
-	top: 660px;
+	margin-left: 0px;
+	top: 590px;
 
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
