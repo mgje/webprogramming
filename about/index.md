@@ -1,7 +1,7 @@
 ---
 layout: noCode
 title: About
-class: processing
+class: about
 ---
 # About
 

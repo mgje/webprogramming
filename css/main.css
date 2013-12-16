@@ -4,24 +4,24 @@
 
 @font-face {
 	font-family: 'theSerifItalic';
-	src: url(/webprogramming/fonts/TheSerif_B4_Italic.eot),
-		 url(/webprogramming/fonts/TheSerif_B4_Italic.woff) format("woff");
+	src: url(../fonts/TheSerif_B4_Italic.eot),
+		 url(../fonts/TheSerif_B4_Italic.woff) format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'theSerif';
-	src: url(/webprogramming/fonts/TheSerif_B4_Plain_.eot),
-		 url(/webprogramming/fonts/TheSerif_B4_Plain_.woff) format("woff");
+	src: url(../fonts/TheSerif_B4_Plain_.eot),
+		 url(../fonts/TheSerif_B4_Plain_.woff) format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'theSerif';
-	src: url(/webprogramming/fonts/TheSerif_B4_Bold_.eot),
-		 url(/webprogramming/fonts/TheSerif_B4_Bold_.woff) format("woff");
+	src: url(../fonts/TheSerif_B4_Bold_.eot),
+		 url(../fonts/TheSerif_B4_Bold_.woff) format("woff");
 	font-weight: 800;
 	font-style: normal;
 }
@@ -230,7 +230,7 @@ div#canvasContainer {
 
 #horizontalRuler {
 	position: absolute;
-	background: url('/webprogramming/assets/images/horizontal.svg');
+	background: url('../assets/images/horizontal.svg');
 	width: 500px;
 	height: 20px;
 	left: 0;
@@ -242,7 +242,7 @@ div#canvasContainer {
 
 #verticalRuler {
 	position: absolute;
-	background: url('/webprogramming/assets/images/vertical.svg');
+	background: url('../assets/images/vertical.svg');
 	width: 20px;
 	height: 400px;	
 	left: -20px;
