@@ -125,7 +125,7 @@ runCode_f = () ->
 		processingSource = this.editor.getValue()
 		processingCanvas = document.getElementById "editorCanvas"
 		if !(/size\(\s*\d+\s*,\s*\d+\s*\)/.test(processingSource))
-			processingSource = "size(500,400);\n\n" + processingSource
+			processingSource = "size(500,445);\n\n" + processingSource
 
 		#this.processingInstance = new Processing(processingCanvas, processingSource);
 		@processingInstance = new Processing "editorCanvas", processingSource
