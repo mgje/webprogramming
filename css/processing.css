@@ -59,7 +59,7 @@ a:focus, a:active, a::-moz-focus-inner {
 #headerContainer {
 	position: relative;
 	width: 100%;
-	min-width: 1024px;
+	min-width: 960px;
 	background: #FcFcFf;
 	z-index: 1000;		
 	height: 48px;
