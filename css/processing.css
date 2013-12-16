@@ -448,10 +448,10 @@ div#page {
 
 .processing {
 	background: #E67AC2;
-	overflow: auto;
+	/*overflow: auto;
 	margin: 12px;
 	padding: 12px;
-	outline: 1px solid #ccc	;
+	outline: 1px solid #ccc	;*/
 }
 
 
