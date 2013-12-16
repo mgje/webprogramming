@@ -1,9 +1,7 @@
 Web-Programming
 ===============
 
-Web coding project with processing.
-
-visit: [http://mgje.github.io/webprogramming/](http://mgje.github.io/webprogramming/)
+Web coding project - visit: [http://mgje.github.io/webprogramming/](http://mgje.github.io/webprogramming/)
 
 
 The interacative Programming Language [Processing](http://www.processing.org/) 
