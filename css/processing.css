@@ -200,8 +200,8 @@ div#canvasContainer {
 
 #toggleRulers {
 	position: absolute;
-	margin-left: 0px;
-	top: 590px;
+	margin-left: 10px;
+	top: 610px;
 
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -299,8 +299,8 @@ div#editorContainer {
 
 div#editorCommands {
 	position: absolute;
-	top: 590px;
-	left: 330px;
+	top: 610px;
+	left: 300px;
 /*	z-index: 1000;	*/
 }
 
