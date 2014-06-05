@@ -1,3 +1,4 @@
 name: Programm
 exclude: [".coffee"]
+markdown: kramdown
 baseurl: /webprogramming/
