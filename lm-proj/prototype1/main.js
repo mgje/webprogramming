@@ -1,4 +1,4 @@
-
+(function() {
 let luna_mdata="json_not_loaded";
 let time_scale=["1-7 days","8-15 days","0.5-6 months","6-12 months","1.0 year","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"];
 let gender =["male","female"];
@@ -60,19 +60,67 @@ const check_global_vars = () => {
         console.log("method not selcted: "+methode_value);
         return false;
     }
-
     return true; 
 }
 
+
+
+
 const ouput_value = (val) => {
+    document.getElementById("SDS_value").value=val;
 
 }
-
 
 //Calc male nmol_L
 // (input-Median)/(Input>Median?1SDSplus:1SDSminus)
-const evaluate_mdata = () => {
-    if (check_global_vars()){
+const calc_value = (gender,methode,time,measurement) => {
+    let median,oneSDSplus,oneSDSminus,denominator,calculation;
+    median = luna_mdata[gender][methode][time]["Median"];
+    oneSDSplus = luna_mdata[gender][methode][time]["1SDSplus"];
+    oneSDSminus = luna_mdata[gender][methode][time]["1SDSminus"];
+    if (measurement>median){
+        denominator = oneSDSplus;
+    } else {
+        denominator = oneSDSminus;
+    }
+    //denominator = (measurement>median)?oneSDSplus:oneSDSminus;
+    calculation = (measurement-median)/denominator;
+    return calculation;
+}
 
+const debug_column_output = () => {
+    let tmp;
+    let s="<table>";
+    let median;
+    let oneSDSminus;
+    let oneSDSplus;
+
+    for (var i = 0; i < time_scale.length; i++) {
+        tmp = calc_value(gender_value,methode_value,time_scale[i],measurement_value);
+        median = luna_mdata[gender_value][methode_value][time_scale[i]]["Median"];
+        oneSDSplus = luna_mdata[gender_value][methode_value][time_scale[i]]["1SDSplus"];
+        oneSDSminus = luna_mdata[gender_value][methode_value][time_scale[i]]["1SDSminus"];
+
+        //s += "<tr><td>"+tmp+"</td><td>"+median+"</td><td>"+oneSDSplus+"</td><td>"+oneSDSminus+"</td></tr>";
+        s += "<tr><td>"+tmp+"</td></tr>";
+    }
+    s += "</table>";
+    document.getElementById("debug_output").innerHTML=s;
+}
+
+
+const evaluate_mdata = () => {
+    
+    if (check_global_vars()){
+        
+        ouput_value(calc_value(gender_value,methode_value,time_value,measurement_value));
+        
+        //debug
+        debug_column_output()
     }
 }
+
+let el = document.getElementById("lm_form");
+el.addEventListener("change", evaluate_mdata, false);
+
+}).call(this);
