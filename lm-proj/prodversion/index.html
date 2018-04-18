@@ -8,25 +8,17 @@
 <body>
 
 <form id="lm_form" action="#">
+Geschlecht
 <select id="gender" name="gender">
-    <option value="None selected">male or female</option>
-    <option value="male">male</option>
-    <option value="female">female</option>
+    <option value="None selected">Bitte wählen</option>
+    <option value="male">männlich</option>
+    <option value="female">weiblich</option>
 </select>
 <br/>
-<select id="methode" name="methode">
-    <option value="None selected">select method</option>
-    <option value="ng_ml">ng/ml</option>
-    <option value="mol_L">mol/L</option>
-</select>
-<br/>
+Alter in Jahren
 <select id="age" name="age">
-    <option value="None selected">select age</option>
-    <option value="1-7 days">1-7 days</option>
-    <option value="8-15 days">8-15 days</option>
-    <option value="0.5-6 months">0.5-6 months</option>
-    <option value="6-12 months">6-12 months</option>
-    <option value="1.0 year">1.0 year</option>
+    <option value="None selected">Bitte wählen</option>
+    <option value="1.0 year">1</option>
     <option value="2">2</option>
     <option value="3">3</option>
     <option value="4">4</option>
@@ -48,15 +40,24 @@
     <option value="20">20</option>
 </select>
 <br/>
-<input id="mesurement" type="number" name="val" value="0" min="0" max="200" required>
+Einheit
+<select id="methode" name="methode">
+    <option value="None selected">Bitte wählen</option>
+    <option value="ng_ml">ng/ml</option>
+    <option value="mol_L">mol/L</option>
+</select>
+<br/>
+gemessener Wert
+<input id="mesurement" type="number" name="val" value="0" min="0" max="1000" required>
 
 <br/>
 
 </form>
 
-SDS = <b><output id="SDS_value" name="result">no value</output></b>
+SDS <b><output id="SDS_value" name="result">----</output></b>
 
 <br/>
+
 <div id="debug_output">
 
 </div>

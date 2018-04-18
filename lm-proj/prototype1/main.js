@@ -109,18 +109,41 @@ const debug_column_output = () => {
 }
 
 
-const evaluate_mdata = () => {
+const evaluate_mdata = (e) => {
     
     if (check_global_vars()){
         
         ouput_value(calc_value(gender_value,methode_value,time_value,measurement_value));
         
         //debug
-        debug_column_output()
+        debug_column_output();
+
     }
 }
 
+const assert = (condition, message) => { 
+    if (!condition)
+        throw Error("Assert failed" + (typeof message !== "undefined" ? ": " + message : ""));
+};
+
+assert(1===1); // executes without problem
+//assert(false, "Expected true"); // yields "Error: Assert failed: Expected true" in console
+
+
+
 let el = document.getElementById("lm_form");
 el.addEventListener("change", evaluate_mdata, false);
+el.addEventListener("submit", (e) => {
+    e.preventDefault();
+}, false);
+el.addEventListener("click", (e) => {
+    e.preventDefault();
+}, false);
+el = document.getElementById("mesurement");
+el.addEventListener("submit", (e) => {
+    e.preventDefault();
+}, false);
+
+
 
 }).call(this);
