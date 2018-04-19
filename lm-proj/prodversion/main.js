@@ -1,9 +1,10 @@
+"use strict";
 (function() {
 //DATA
-let luna_mdata={"male":{"ng_ml":{"2":{"Median":125,"1SDSminus":37.75510204,"1SDSplus":90.81632653},"3":{"Median":119,"1SDSminus":35.71428571,"1SDSplus":86.73469388},"4":{"Median":118,"1SDSminus":35.20408163,"1SDSplus":84.18367347},"5":{"Median":119,"1SDSminus":35.20408163,"1SDSplus":85.20408163},"6":{"Median":124,"1SDSminus":36.73469388,"1SDSplus":88.26530612},"7":{"Median":125,"1SDSminus":37.24489796,"1SDSplus":89.28571429},"8":{"Median":139,"1SDSminus":41.32653061,"1SDSplus":96.93877551},"9":{"Median":159,"1SDSminus":46.93877551,"1SDSplus":109.1836735},"10":{"Median":188,"1SDSminus":55.10204082,"1SDSplus":127.5510204},"11":{"Median":233,"1SDSminus":67.34693878,"1SDSplus":155.6122449},"12":{"Median":301,"1SDSminus":86.73469388,"1SDSplus":198.4693878},"13":{"Median":388,"1SDSminus":110.2040816,"1SDSplus":246.9387755},"14":{"Median":470,"1SDSminus":130.1020408,"1SDSplus":283.6734694},"15":{"Median":500,"1SDSminus":134.6938776,"1SDSplus":285.7142857},"16":{"Median":468,"1SDSminus":122.9591837,"1SDSplus":253.0612245},"17":{"Median":398,"1SDSminus":101.5306122,"1SDSplus":202.5510204},"18":{"Median":330,"1SDSminus":81.63265306,"1SDSplus":158.1632653},"19":{"Median":278,"1SDSminus":66.83673469,"1SDSplus":127.0408163},"20":{"Median":246,"1SDSminus":58.16326531,"1SDSplus":107.6530612},"1-7 days":{"Median":13,"1SDSminus":1.530612245,"1SDSplus":9.693877551},"8-15 days":{"Median":25,"1SDSminus":7.142857143,"1SDSplus":8.163265306},"0.5-6 months":{"Median":155,"1SDSminus":54.59183673,"1SDSplus":80.6122449},"6-12 months":{"Median":140,"1SDSminus":42.34693878,"1SDSplus":104.0816327},"1.0 year":{"Median":134,"1SDSminus":40.30612245,"1SDSplus":98.46938776}},"mol_L":{"2":{"Median":16.375,"1SDSminus":4.945918367,"1SDSplus":11.89693878},"3":{"Median":15.589,"1SDSminus":4.678571429,"1SDSplus":11.3622449},"4":{"Median":15.458,"1SDSminus":4.611734694,"1SDSplus":11.02806122},"5":{"Median":15.589,"1SDSminus":4.611734694,"1SDSplus":11.16173469},"6":{"Median":16.244,"1SDSminus":4.812244898,"1SDSplus":11.5627551},"7":{"Median":16.375,"1SDSminus":4.879081633,"1SDSplus":11.69642857},"8":{"Median":18.209,"1SDSminus":5.41377551,"1SDSplus":12.69897959},"9":{"Median":20.829,"1SDSminus":6.148979592,"1SDSplus":14.30306122},"10":{"Median":24.628,"1SDSminus":7.218367347,"1SDSplus":16.70918367},"11":{"Median":30.523,"1SDSminus":8.82244898,"1SDSplus":20.38520408},"12":{"Median":39.431,"1SDSminus":11.3622449,"1SDSplus":25.9994898},"13":{"Median":50.828,"1SDSminus":14.43673469,"1SDSplus":32.34897959},"14":{"Median":61.57,"1SDSminus":17.04336735,"1SDSplus":37.16122449},"15":{"Median":65.5,"1SDSminus":17.64489796,"1SDSplus":37.42857143},"16":{"Median":61.308,"1SDSminus":16.10765306,"1SDSplus":33.15102041},"17":{"Median":52.138,"1SDSminus":13.3005102,"1SDSplus":26.53418367},"18":{"Median":43.23,"1SDSminus":10.69387755,"1SDSplus":20.71938776},"19":{"Median":36.418,"1SDSminus":8.755612245,"1SDSplus":16.64234694},"20":{"Median":32.226,"1SDSminus":7.619387755,"1SDSplus":14.10255102},"1-7 days":{"Median":1.703,"1SDSminus":0.200510204,"1SDSplus":1.269897959},"8-15 days":{"Median":3.275,"1SDSminus":0.935714286,"1SDSplus":1.069387755},"0.5-6 months":{"Median":20.305,"1SDSminus":7.151530612,"1SDSplus":10.56020408},"6-12 months":{"Median":18.34,"1SDSminus":5.54744898,"1SDSplus":13.63469388},"1.0 year":{"Median":17.554,"1SDSminus":5.280102041,"1SDSplus":12.8994898}}},"female":{"ng_ml":{"2":{"Median":125,"1SDSminus":37.75510204,"1SDSplus":90.81632653},"3":{"Median":119,"1SDSminus":35.71428571,"1SDSplus":86.73469388},"4":{"Median":118,"1SDSminus":35.20408163,"1SDSplus":84.18367347},"5":{"Median":119,"1SDSminus":35.20408163,"1SDSplus":85.20408163},"6":{"Median":124,"1SDSminus":36.73469388,"1SDSplus":88.26530612},"7":{"Median":140,"1SDSminus":39.79591837,"1SDSplus":89.79591837},"8":{"Median":155,"1SDSminus":43.36734694,"1SDSplus":96.42857143},"9":{"Median":178,"1SDSminus":49.48979592,"1SDSplus":107.6530612},"10":{"Median":210,"1SDSminus":57.65306122,"1SDSplus":123.9795918},"11":{"Median":259,"1SDSminus":69.89795918,"1SDSplus":148.9795918},"12":{"Median":324,"1SDSminus":86.2244898,"1SDSplus":181.6326531},"13":{"Median":391,"1SDSminus":102.5510204,"1SDSplus":211.2244898},"14":{"Median":446,"1SDSminus":114.2857143,"1SDSplus":229.5918367},"15":{"Median":467,"1SDSminus":116.8367347,"1SDSplus":229.5918367},"16":{"Median":438,"1SDSminus":107.1428571,"1SDSplus":204.5918367},"17":{"Median":363,"1SDSminus":86.2244898,"1SDSplus":161.7346939},"18":{"Median":296,"1SDSminus":68.36734694,"1SDSplus":125},"19":{"Median":247,"1SDSminus":55.6122449,"1SDSplus":99.48979592},"20":{"Median":217,"1SDSminus":48.46938776,"1SDSplus":85.20408163},"1-7 days":{"Median":13,"1SDSminus":1.530612245,"1SDSplus":9.693877551},"8-15 days":{"Median":25,"1SDSminus":7.142857143,"1SDSplus":8.163265306},"0.5-6 months":{"Median":155,"1SDSminus":54.59183673,"1SDSplus":80.6122449},"6-12 months":{"Median":140,"1SDSminus":42.34693878,"1SDSplus":104.0816327},"1.0 year":{"Median":134,"1SDSminus":40.30612245,"1SDSplus":98.46938776}},"mol_L":{"2":{"Median":16.375,"1SDSminus":4.945918367,"1SDSplus":11.89693878},"3":{"Median":15.589,"1SDSminus":4.678571429,"1SDSplus":11.3622449},"4":{"Median":15.458,"1SDSminus":4.611734694,"1SDSplus":11.02806122},"5":{"Median":15.589,"1SDSminus":4.611734694,"1SDSplus":11.16173469},"6":{"Median":16.244,"1SDSminus":4.812244898,"1SDSplus":11.5627551},"7":{"Median":18.34,"1SDSminus":5.213265306,"1SDSplus":11.76326531},"8":{"Median":20.305,"1SDSminus":5.681122449,"1SDSplus":12.63214286},"9":{"Median":23.318,"1SDSminus":6.483163265,"1SDSplus":14.10255102},"10":{"Median":27.51,"1SDSminus":7.55255102,"1SDSplus":16.24132653},"11":{"Median":33.929,"1SDSminus":9.156632653,"1SDSplus":19.51632653},"12":{"Median":42.444,"1SDSminus":11.29540816,"1SDSplus":23.79387755},"13":{"Median":51.221,"1SDSminus":13.43418367,"1SDSplus":27.67040816},"14":{"Median":58.426,"1SDSminus":14.97142857,"1SDSplus":30.07653061},"15":{"Median":61.177,"1SDSminus":15.30561224,"1SDSplus":30.07653061},"16":{"Median":57.378,"1SDSminus":14.03571429,"1SDSplus":26.80153061},"17":{"Median":47.553,"1SDSminus":11.29540816,"1SDSplus":21.1872449},"18":{"Median":38.776,"1SDSminus":8.956122449,"1SDSplus":16.375},"19":{"Median":32.357,"1SDSminus":7.285204082,"1SDSplus":13.03316327},"20":{"Median":28.427,"1SDSminus":6.349489796,"1SDSplus":11.16173469},"1-7 days":{"Median":1.703,"1SDSminus":0.200510204,"1SDSplus":1.269897959},"8-15 days":{"Median":3.275,"1SDSminus":0.935714286,"1SDSplus":1.069387755},"0.5-6 months":{"Median":20.305,"1SDSminus":7.151530612,"1SDSplus":10.56020408},"6-12 months":{"Median":18.34,"1SDSminus":5.54744898,"1SDSplus":13.63469388},"1.0 year":{"Median":17.554,"1SDSminus":5.280102041,"1SDSplus":12.8994898}}}};
-let time_scale=["1-7 days","8-15 days","0.5-6 months","6-12 months","1.0 year","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"];
-let gender =["male","female"];
-let methode =["mol_L","ng_ml"];
+const luna_mdata={"male":{"ng_ml":{"2":{"Median":125,"1SDSminus":37.75510204,"1SDSplus":90.81632653},"3":{"Median":119,"1SDSminus":35.71428571,"1SDSplus":86.73469388},"4":{"Median":118,"1SDSminus":35.20408163,"1SDSplus":84.18367347},"5":{"Median":119,"1SDSminus":35.20408163,"1SDSplus":85.20408163},"6":{"Median":124,"1SDSminus":36.73469388,"1SDSplus":88.26530612},"7":{"Median":125,"1SDSminus":37.24489796,"1SDSplus":89.28571429},"8":{"Median":139,"1SDSminus":41.32653061,"1SDSplus":96.93877551},"9":{"Median":159,"1SDSminus":46.93877551,"1SDSplus":109.1836735},"10":{"Median":188,"1SDSminus":55.10204082,"1SDSplus":127.5510204},"11":{"Median":233,"1SDSminus":67.34693878,"1SDSplus":155.6122449},"12":{"Median":301,"1SDSminus":86.73469388,"1SDSplus":198.4693878},"13":{"Median":388,"1SDSminus":110.2040816,"1SDSplus":246.9387755},"14":{"Median":470,"1SDSminus":130.1020408,"1SDSplus":283.6734694},"15":{"Median":500,"1SDSminus":134.6938776,"1SDSplus":285.7142857},"16":{"Median":468,"1SDSminus":122.9591837,"1SDSplus":253.0612245},"17":{"Median":398,"1SDSminus":101.5306122,"1SDSplus":202.5510204},"18":{"Median":330,"1SDSminus":81.63265306,"1SDSplus":158.1632653},"19":{"Median":278,"1SDSminus":66.83673469,"1SDSplus":127.0408163},"20":{"Median":246,"1SDSminus":58.16326531,"1SDSplus":107.6530612},"1-7 days":{"Median":13,"1SDSminus":1.530612245,"1SDSplus":9.693877551},"8-15 days":{"Median":25,"1SDSminus":7.142857143,"1SDSplus":8.163265306},"0.5-6 months":{"Median":155,"1SDSminus":54.59183673,"1SDSplus":80.6122449},"6-12 months":{"Median":140,"1SDSminus":42.34693878,"1SDSplus":104.0816327},"1.0 year":{"Median":134,"1SDSminus":40.30612245,"1SDSplus":98.46938776}},"mol_L":{"2":{"Median":16.375,"1SDSminus":4.945918367,"1SDSplus":11.89693878},"3":{"Median":15.589,"1SDSminus":4.678571429,"1SDSplus":11.3622449},"4":{"Median":15.458,"1SDSminus":4.611734694,"1SDSplus":11.02806122},"5":{"Median":15.589,"1SDSminus":4.611734694,"1SDSplus":11.16173469},"6":{"Median":16.244,"1SDSminus":4.812244898,"1SDSplus":11.5627551},"7":{"Median":16.375,"1SDSminus":4.879081633,"1SDSplus":11.69642857},"8":{"Median":18.209,"1SDSminus":5.41377551,"1SDSplus":12.69897959},"9":{"Median":20.829,"1SDSminus":6.148979592,"1SDSplus":14.30306122},"10":{"Median":24.628,"1SDSminus":7.218367347,"1SDSplus":16.70918367},"11":{"Median":30.523,"1SDSminus":8.82244898,"1SDSplus":20.38520408},"12":{"Median":39.431,"1SDSminus":11.3622449,"1SDSplus":25.9994898},"13":{"Median":50.828,"1SDSminus":14.43673469,"1SDSplus":32.34897959},"14":{"Median":61.57,"1SDSminus":17.04336735,"1SDSplus":37.16122449},"15":{"Median":65.5,"1SDSminus":17.64489796,"1SDSplus":37.42857143},"16":{"Median":61.308,"1SDSminus":16.10765306,"1SDSplus":33.15102041},"17":{"Median":52.138,"1SDSminus":13.3005102,"1SDSplus":26.53418367},"18":{"Median":43.23,"1SDSminus":10.69387755,"1SDSplus":20.71938776},"19":{"Median":36.418,"1SDSminus":8.755612245,"1SDSplus":16.64234694},"20":{"Median":32.226,"1SDSminus":7.619387755,"1SDSplus":14.10255102},"1-7 days":{"Median":1.703,"1SDSminus":0.200510204,"1SDSplus":1.269897959},"8-15 days":{"Median":3.275,"1SDSminus":0.935714286,"1SDSplus":1.069387755},"0.5-6 months":{"Median":20.305,"1SDSminus":7.151530612,"1SDSplus":10.56020408},"6-12 months":{"Median":18.34,"1SDSminus":5.54744898,"1SDSplus":13.63469388},"1.0 year":{"Median":17.554,"1SDSminus":5.280102041,"1SDSplus":12.8994898}}},"female":{"ng_ml":{"2":{"Median":125,"1SDSminus":37.75510204,"1SDSplus":90.81632653},"3":{"Median":119,"1SDSminus":35.71428571,"1SDSplus":86.73469388},"4":{"Median":118,"1SDSminus":35.20408163,"1SDSplus":84.18367347},"5":{"Median":119,"1SDSminus":35.20408163,"1SDSplus":85.20408163},"6":{"Median":124,"1SDSminus":36.73469388,"1SDSplus":88.26530612},"7":{"Median":140,"1SDSminus":39.79591837,"1SDSplus":89.79591837},"8":{"Median":155,"1SDSminus":43.36734694,"1SDSplus":96.42857143},"9":{"Median":178,"1SDSminus":49.48979592,"1SDSplus":107.6530612},"10":{"Median":210,"1SDSminus":57.65306122,"1SDSplus":123.9795918},"11":{"Median":259,"1SDSminus":69.89795918,"1SDSplus":148.9795918},"12":{"Median":324,"1SDSminus":86.2244898,"1SDSplus":181.6326531},"13":{"Median":391,"1SDSminus":102.5510204,"1SDSplus":211.2244898},"14":{"Median":446,"1SDSminus":114.2857143,"1SDSplus":229.5918367},"15":{"Median":467,"1SDSminus":116.8367347,"1SDSplus":229.5918367},"16":{"Median":438,"1SDSminus":107.1428571,"1SDSplus":204.5918367},"17":{"Median":363,"1SDSminus":86.2244898,"1SDSplus":161.7346939},"18":{"Median":296,"1SDSminus":68.36734694,"1SDSplus":125},"19":{"Median":247,"1SDSminus":55.6122449,"1SDSplus":99.48979592},"20":{"Median":217,"1SDSminus":48.46938776,"1SDSplus":85.20408163},"1-7 days":{"Median":13,"1SDSminus":1.530612245,"1SDSplus":9.693877551},"8-15 days":{"Median":25,"1SDSminus":7.142857143,"1SDSplus":8.163265306},"0.5-6 months":{"Median":155,"1SDSminus":54.59183673,"1SDSplus":80.6122449},"6-12 months":{"Median":140,"1SDSminus":42.34693878,"1SDSplus":104.0816327},"1.0 year":{"Median":134,"1SDSminus":40.30612245,"1SDSplus":98.46938776}},"mol_L":{"2":{"Median":16.375,"1SDSminus":4.945918367,"1SDSplus":11.89693878},"3":{"Median":15.589,"1SDSminus":4.678571429,"1SDSplus":11.3622449},"4":{"Median":15.458,"1SDSminus":4.611734694,"1SDSplus":11.02806122},"5":{"Median":15.589,"1SDSminus":4.611734694,"1SDSplus":11.16173469},"6":{"Median":16.244,"1SDSminus":4.812244898,"1SDSplus":11.5627551},"7":{"Median":18.34,"1SDSminus":5.213265306,"1SDSplus":11.76326531},"8":{"Median":20.305,"1SDSminus":5.681122449,"1SDSplus":12.63214286},"9":{"Median":23.318,"1SDSminus":6.483163265,"1SDSplus":14.10255102},"10":{"Median":27.51,"1SDSminus":7.55255102,"1SDSplus":16.24132653},"11":{"Median":33.929,"1SDSminus":9.156632653,"1SDSplus":19.51632653},"12":{"Median":42.444,"1SDSminus":11.29540816,"1SDSplus":23.79387755},"13":{"Median":51.221,"1SDSminus":13.43418367,"1SDSplus":27.67040816},"14":{"Median":58.426,"1SDSminus":14.97142857,"1SDSplus":30.07653061},"15":{"Median":61.177,"1SDSminus":15.30561224,"1SDSplus":30.07653061},"16":{"Median":57.378,"1SDSminus":14.03571429,"1SDSplus":26.80153061},"17":{"Median":47.553,"1SDSminus":11.29540816,"1SDSplus":21.1872449},"18":{"Median":38.776,"1SDSminus":8.956122449,"1SDSplus":16.375},"19":{"Median":32.357,"1SDSminus":7.285204082,"1SDSplus":13.03316327},"20":{"Median":28.427,"1SDSminus":6.349489796,"1SDSplus":11.16173469},"1-7 days":{"Median":1.703,"1SDSminus":0.200510204,"1SDSplus":1.269897959},"8-15 days":{"Median":3.275,"1SDSminus":0.935714286,"1SDSplus":1.069387755},"0.5-6 months":{"Median":20.305,"1SDSminus":7.151530612,"1SDSplus":10.56020408},"6-12 months":{"Median":18.34,"1SDSminus":5.54744898,"1SDSplus":13.63469388},"1.0 year":{"Median":17.554,"1SDSminus":5.280102041,"1SDSplus":12.8994898}}}};
+const time_scale=["1-7 days","8-15 days","0.5-6 months","6-12 months","1.0 year","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"];
+const gender =["male","female"];
+const methode =["mol_L","ng_ml"];
 let time_value="";
 let gender_value="";
 let methode_value = "";
@@ -11,7 +12,7 @@ let measurement_value = "";
 
 
 // check if all parameters are in the range
-const check_global_vars = () => {
+const check_global_vars = function() {
     
     // Read from form
     measurement_value = parseFloat(document.getElementById("mesurement").value);
@@ -41,19 +42,17 @@ const check_global_vars = () => {
         return false;
     }
     return true; 
-}
-
-
+};
 
 //Output
-const ouput_value = (val) => {
+const ouput_value = function(val) {
     let roundval = Math.round(val * 100) / 100;
     document.getElementById("SDS_value").value=roundval;
-}
+};
 
 //Calc male nmol_L
 // (input-Median)/(Input>Median?1SDSplus:1SDSminus)
-const calc_value = (gender,methode,time,measurement) => {
+const calc_value = function(gender,methode,time,measurement) {
     let median,oneSDSplus,oneSDSminus,denominator,calculation;
     median = luna_mdata[gender][methode][time]["Median"];
     oneSDSplus = luna_mdata[gender][methode][time]["1SDSplus"];
@@ -66,10 +65,10 @@ const calc_value = (gender,methode,time,measurement) => {
     //denominator = (measurement>median)?oneSDSplus:oneSDSminus;
     calculation = (measurement-median)/denominator;
     return calculation;
-}
+};
 
 //debug Method
-const debug_column_output = () => {
+const debug_column_output = function() {
     let tmp;
     let s="<table>";
     let median;
@@ -87,29 +86,29 @@ const debug_column_output = () => {
     }
     s += "</table>";
     document.getElementById("debug_output").innerHTML=s;
-}
+};
 
 //main evaluation
-const evaluate_mdata = (e) => {  
+const evaluate_mdata = function(e) {  
     if (check_global_vars()){
         ouput_value(calc_value(gender_value,methode_value,time_value,measurement_value));
         //debug output all values
         //debug_column_output();
     }
-}
+};
 
 
 // Event Listener
 let el = document.getElementById("lm_form");
 el.addEventListener("change", evaluate_mdata, false);
-el.addEventListener("submit", (e) => {
+el.addEventListener("submit", function(e) {
     e.preventDefault();
 }, false);
-el.addEventListener("click", (e) => {
+el.addEventListener("click", function(e) {
     e.preventDefault();
 }, false);
 el = document.getElementById("mesurement");
-el.addEventListener("submit", (e) => {
+el.addEventListener("submit", function(e) {
     e.preventDefault();
 }, false);
 
@@ -119,7 +118,7 @@ el.addEventListener("submit", (e) => {
 //automated testing
 
 
-const assert = (condition, message) => { 
+const assert = function(condition, message) { 
     if (!condition)
         throw Error("Assert failed" + (typeof message !== "undefined" ? ": " + message : ""));
 };
@@ -127,7 +126,7 @@ const assert = (condition, message) => {
 
 
 //compare numbers in vector
-const compare_vec = (arr1, arr2) => {
+const compare_vec = function(arr1, arr2) {
     let e = 0.000000001;
     let dif=0.001;
     if (arr1.length !== arr2.length){
@@ -138,7 +137,7 @@ const compare_vec = (arr1, arr2) => {
         dif = arr1[i]-arr2[i];
         if (dif*dif > e){
             console.log("item nr:"+i+"  time: "+time_scale[i]);
-            return false
+            return false;
         }
     }
     return true;
@@ -148,7 +147,7 @@ const compare_vec = (arr1, arr2) => {
 
 //calc vector
 //debug Method
-const calc_vec = (gend,meth,inputval) => {
+const calc_vec = function(gend,meth,inputval) {
     let tmp;
     let output = [];
 
@@ -156,7 +155,7 @@ const calc_vec = (gend,meth,inputval) => {
         tmp = calc_value(gend,meth,time_scale[i],inputval);
         output.push(tmp);
     }
-    return output
+    return output;
 };
 
 // Tests
